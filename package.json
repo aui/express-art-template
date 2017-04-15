@@ -1,0 +1,29 @@
+{
+  "name": "art-template-express",
+  "version": "0.0.1",
+  "description": "art-template for express",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "export NODE_ENV=development && node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aui/art-template-loader.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aui/art-template-loader/issues"
+  },
+  "homepage": "https://github.com/aui/art-template-loader#readme",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "art-template": ">=4.0.0-beta6"
+  },
+  "devDependencies": {
+    "express": "^4.15.2"
+  }
+}
