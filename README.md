@@ -1,11 +1,11 @@
-# art-template-express
+# express-art-template
 
 art-template for express
 
 ## Install
 
 ```
-npm install --save art-template-express
+npm install --save express-art-template
 ```
 
 ## Example
@@ -13,7 +13,7 @@ npm install --save art-template-express
 ```js
 var express = require('express');
 var app = express();
-app.engine('art', require('art-template-express'));
+app.engine('art', require('express-art-template'));
 
 app.get('/', function (req, res) {
     res.render('index.art', {

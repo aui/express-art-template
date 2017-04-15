@@ -1,5 +1,5 @@
 {
-  "name": "art-template-express",
+  "name": "express-art-template",
   "version": "0.0.1",
   "description": "art-template for express",
   "main": "src/index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aui/art-template-loader.git"
+    "url": "git+https://github.com/aui/express-art-template.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aui/art-template-loader/issues"
+    "url": "https://github.com/aui/express-art-template/issues"
   },
-  "homepage": "https://github.com/aui/art-template-loader#readme",
+  "homepage": "https://github.com/aui/express-art-template#readme",
   "engines": {
     "node": ">= 4.0.0"
   },
