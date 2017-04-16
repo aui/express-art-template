@@ -14,6 +14,9 @@ npm install --save express-art-template
 var express = require('express');
 var app = express();
 app.engine('art', require('express-art-template'));
+app.set('view options', {
+    debug: process.env.NODE_ENV !== 'production'
+});
 
 app.get('/', function (req, res) {
     res.render('index.art', {
@@ -24,7 +27,6 @@ app.get('/', function (req, res) {
     });
 });
 ```
-
 
 ## Options
 

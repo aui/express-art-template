@@ -1,5 +1,8 @@
 var template = require('art-template');
-var defaults = template.defaults;;
+var defaults = template.defaults;
+var options = defaults.$extend({
+    debug: process.env.NODE_ENV !== 'production'
+});
 
 
 function renderFile() {
@@ -7,8 +10,6 @@ function renderFile() {
     var data;
     var filename = arguments[0];
     var callback = arguments[arguments.length - 1];
-    var options = {};
-
 
     if (arguments.length > 2) {
         data = arguments[1];
@@ -18,14 +19,14 @@ function renderFile() {
         if (arguments.length === 3) {
             // Express 4
             if (data.settings && data.settings['view options']) {
-                options = defaults.$extend(data.settings['view options']);
+                options = options.$extend(data.settings['view options']);
             }
             // Express 3 and lower
             else {
-                options = defaults.$extend(data);
+                options = options.$extend(data);
             }
         } else {
-            options = defaults.$extend(arguments[2]);
+            options = options.$extend(arguments[2]);
         }
 
     } else {
@@ -44,4 +45,5 @@ function renderFile() {
 };
 
 
+renderFile.template = template;
 module.exports = renderFile;

@@ -1,6 +1,6 @@
 {
   "name": "express-art-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "art-template for express",
   "main": "src/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "art-template": ">=4.0.0-beta6"
+    "art-template": ">=4.0.0-beta8"
   },
   "devDependencies": {
     "express": "^4.15.2"

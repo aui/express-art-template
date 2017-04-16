@@ -4,6 +4,9 @@ var app = express();
 
 app.engine('html', require('../'));
 app.set('views', __dirname + '/views');
+app.set('view options', {
+    debug: process.env.NODE_ENV !== 'production'
+});
 
 app.get('/', function (req, res) {
     res.render('index.html', {
