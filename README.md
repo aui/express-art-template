@@ -1,10 +1,14 @@
 # express-art-template
 
+[![NPM Version](https://img.shields.io/npm/v/express-art-template.svg)](https://npmjs.org/package/express-art-template)
+[![Node.js Version](https://img.shields.io/node/v/express-art-template.svg)](http://nodejs.org/download/)
+
 art-template for express
 
 ## Install
 
-```
+```shell
+npm install --save art-template
 npm install --save express-art-template
 ```
 
