@@ -1,36 +1,12 @@
 var template = require('art-template');
-var defaults = template.defaults;
-var options = defaults.$extend({
-    debug: process.env.NODE_ENV !== 'production'
-});
 
 
-function renderFile() {
+function renderFile(filename, options, callback) {
 
-    var data;
-    var filename = arguments[0];
-    var callback = arguments[arguments.length - 1];
+    var data = options;
 
-    if (arguments.length > 2) {
-        data = arguments[1];
-
-        // No options object -- if there are optiony names
-        // in the data, copy them to options
-        if (arguments.length === 3) {
-            // Express 4
-            if (data.settings && data.settings['view options']) {
-                options = options.$extend(data.settings['view options']);
-            }
-            // Express 3 and lower
-            else {
-                options = options.$extend(data);
-            }
-        } else {
-            options = options.$extend(arguments[2]);
-        }
-
-    } else {
-        data = {};
+    if (options.settings && options.settings['view options']) {
+        options = options.settings['view options'];
     }
 
     options.filename = filename;
@@ -42,7 +18,7 @@ function renderFile() {
         callback(e);
     }
 
-};
+}
 
 
 renderFile.template = template;
